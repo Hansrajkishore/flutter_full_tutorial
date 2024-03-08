@@ -1,0 +1,34 @@
+[
+        {
+                "name": "Ananya Mishra Kishore",
+                "roll": "221604",
+                "age": "19",
+                "address": "SwarajPuri Road",
+                "gender": "Female",
+                "relation": "Wife of Hansraj Kishore"
+        },
+        {
+                "name": "Bhaskar Mishra",
+                "roll": "22164",
+                "age": "19",
+                "address": "SwarajPuri Road",
+                "gender": "male",
+                "relation": "brother-in-law of Hansraj Kishore"
+        },
+        {
+                "name": "Hansraj Kishore",
+                "roll": "221606",
+                "age": "20",
+                "address": "SwarajPuri Road",
+                "gender": "male",
+                "relation": "Husband of Ananya Mishra Kishore"
+        },
+        {
+                "name": "Ayush Prakash",
+                "roll": "2216124",
+                "age": "21",
+                "address": "Airport Road",
+                "gender": "male",
+                "relation": "Friend of Hansraj Kishore"
+        }
+]
