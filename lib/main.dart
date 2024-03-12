@@ -1,27 +1,58 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_tutorial/Drawer/my_drawer.dart';
-
-import 'package:flutter_full_tutorial/Pages/json_online_mapping.dart';
-import 'package:flutter_full_tutorial/Pages/login_page.dart';
+import 'package:flutter_full_tutorial/Expandable.dart';
+import 'package:flutter_full_tutorial/stickHeader.dart';
+import 'package:velocity_x/velocity_x.dart';
+// import 'package:flutter_full_tutorial/pull_refresh.dart';
+// import 'package:flutter_full_tutorial/swipe_delete.dart';
 
 void main() {
-  runApp(LoginPage());
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: ListView_Update(),
+  ));
 }
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+// ignore: camel_case_types
+class ListView_Update extends StatelessWidget {
+  const ListView_Update({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Login Page",
-      routes: {
-        "/": (context) => MyDrawer(),
-        // "/": (context) => JsonOnline(),
-        // "/": (context) => HomePage(),
-        "/Home": (context) => MyHomePage(),
-      },
+    return Scaffold(
+      appBar: AppBar(
+        title: "List View Advance".text.makeCentered(),
+        backgroundColor: Vx.amber500,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+                style: ButtonStyle(
+                    fixedSize: MaterialStateProperty.all(Size(200, 50))),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ExpandList(),
+                      ));
+                },
+                child: "Expandable List".text.makeCentered()),
+            ElevatedButton(
+                    style: ButtonStyle(
+                        fixedSize: MaterialStateProperty.all(Size(200, 50))),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => StickHead(),
+                          ));
+                    },
+                    child: "Sticky Header List".text.makeCentered())
+                .py32(),
+          ],
+        ),
+      ),
     );
   }
 }
